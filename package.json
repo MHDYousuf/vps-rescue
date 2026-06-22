@@ -1,0 +1,65 @@
+{
+  "name": "vps-rescue",
+  "version": "0.1.0",
+  "description": "Diagnose and fix unreachable VPS SSH connections by orchestrating Tailscale on your own account. Built for users whose ISP null-routes their VPS provider's IP ranges.",
+  "keywords": [
+    "ssh",
+    "vps",
+    "tailscale",
+    "hostinger",
+    "rescue",
+    "cli",
+    "isp-blocking",
+    "wireguard"
+  ],
+  "license": "MIT",
+  "author": "MHDYousuf",
+  "homepage": "https://github.com/MHDYousuf/vps-rescue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHDYousuf/vps-rescue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MHDYousuf/vps-rescue/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "bin": {
+    "vps-rescue": "./bin/vps-rescue.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm test",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@napi-rs/keyring": "^1.1.6",
+    "clipboardy": "^4.0.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.1",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/prompts": "^2.4.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^4.1.9"
+  }
+}
