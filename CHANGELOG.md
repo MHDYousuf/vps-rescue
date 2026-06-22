@@ -3,6 +3,13 @@
 All notable changes to `vps-rescue` are documented here.
 This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Linux clipboard auto-copy now detects missing `xclip` / `xsel` helpers and
+  prints an install tip instead of the generic copy failure warning.
+
 ## [0.1.0] — 2026-06-22
 
 Initial public release. Diagnoses unreachable VPS SSH connections caused by
