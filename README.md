@@ -1,6 +1,17 @@
 # vps-rescue
 
+[![npm version](https://img.shields.io/npm/v/vps-rescue.svg?color=blue)](https://www.npmjs.com/package/vps-rescue)
+[![CI](https://github.com/MHDYousuf/vps-rescue/actions/workflows/ci.yml/badge.svg)](https://github.com/MHDYousuf/vps-rescue/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/npm/l/vps-rescue.svg?color=green)](https://github.com/MHDYousuf/vps-rescue/blob/main/LICENSE)
+[![npm downloads](https://img.shields.io/npm/dm/vps-rescue.svg)](https://www.npmjs.com/package/vps-rescue)
+[![GitHub stars](https://img.shields.io/github/stars/MHDYousuf/vps-rescue?style=social)](https://github.com/MHDYousuf/vps-rescue/stargazers)
+
 > Diagnose unreachable VPS SSH connections and auto-provision a Tailscale rescue path — on **your own** Tailscale account. No relay infra, no SaaS, no tunnel data ever touches our servers.
+
+```bash
+npx vps-rescue@latest init       # one-time: store your Tailscale API token
+npx vps-rescue@latest ssh root@<your-vps-ip>
+```
 
 `vps-rescue` exists because Indian (and other) ISPs frequently null-route public IP ranges belonging to budget VPS providers like Hostinger, Contabo, and OVH. The result: `ssh root@your-vps` times out from home Wi-Fi but works from cellular. The VPS is fine, your network is fine — the path between them is broken upstream.
 
