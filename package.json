@@ -27,7 +27,7 @@
     "node": ">=20.0.0"
   },
   "bin": {
-    "vps-rescue": "./bin/vps-rescue.js"
+    "vps-rescue": "bin/vps-rescue.js"
   },
   "files": [
     "bin",
