@@ -1,8 +1,8 @@
-import clipboard from "clipboardy";
 import ora from "ora";
 import prompts from "prompts";
 
 import { escapeForBashC } from "../lib/bash-escape.js";
+import { copyToClipboard } from "../lib/clipboard.js";
 import { renderRescueScript } from "../lib/rescue-script.js";
 import {
   TailscaleApiError,
@@ -212,10 +212,12 @@ export class TailscaleTransport implements Transport {
     ui.blank();
 
     if (!ctx.noCopy) {
-      try {
-        await clipboard.write(oneLiner);
+      const copyResult = await copyToClipboard(oneLiner);
+      if (copyResult.ok) {
         ui.ok("Copied to clipboard.");
-      } catch {
+      } else if (copyResult.reason === "linux-missing-helper") {
+        ui.info(copyResult.message);
+      } else {
         ui.warn("Could not copy to clipboard automatically.");
       }
     }
