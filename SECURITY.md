@@ -8,7 +8,10 @@ seriously.
 
 **Do not open public GitHub issues for security bugs.**
 
-Email reports to: **[mohd4yousuf@gmail.com]**
+Email reports to: **mohd4yousuf@gmail.com**
+
+<!-- TODO(owner): swap to a security@ alias once the project gets steady traffic. -->
+
 
 Use this subject line: `[vps-rescue security] <one-line summary>`.
 
