@@ -34,7 +34,7 @@ npm install -g vps-rescue
 ```
 
 Requirements:
-- Node.js ≥ 18.17
+- Node.js ≥ 20.0
 - A Tailscale account (free tier is fine — 100 devices, 3 users)
 - A way to run commands as root on the target VPS (e.g. Hostinger Browser Terminal, IPMI/KVM, recovery shell)
 - Tailscale installed on **your local machine** too (download from <https://tailscale.com/download>) and signed in with the same account

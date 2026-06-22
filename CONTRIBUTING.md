@@ -155,8 +155,8 @@ The TL;DR (the `cursor/team-kit` rules in this repo enforce some of these):
   embedding them in any shell command rendered to the user. Shell injection
   in a rescue script that runs as root is catastrophic.
 
-The CI will check formatting (via TypeScript) and run tests on Node 18,
-20, and 22 for every PR. Get those green before requesting review.
+The CI will check formatting (via TypeScript) and run tests on Node 20
+and 22 for every PR. Get those green before requesting review.
 
 ---
 
